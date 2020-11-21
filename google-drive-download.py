@@ -46,7 +46,10 @@ if __name__ == "__main__":
         # DESTINATION FILE ON YOUR DISK
         cwd = os.getcwd()
         path = sys.argv[2]
-        os.mkdir(path)
+        try:
+            os.mkdir(path)
+        except :
+            pass 
         fileName= sys.argv[3]
         destination=cwd+"/"+path+fileName
         download_file_from_google_drive(file_id, destination)
