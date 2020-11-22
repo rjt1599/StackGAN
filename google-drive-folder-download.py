@@ -37,6 +37,7 @@ def downloadFolder(service, fileId, destinationFolder):
         elif not itemType.startswith('application/'):
             downloadFile(service, itemId, filePath)
         else:
+            pass
             # print "Unsupported file: {itemName}"
 
 
