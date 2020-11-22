@@ -32,12 +32,12 @@ def downloadFolder(service, fileId, destinationFolder):
         filePath = destinationFolder + "/" + itemName
 
         if itemType == 'application/vnd.google-apps.folder':
-            print "Stepping into folder: {filePath}"
+            # print "Stepping into folder: {filePath}"
             downloadFolder(service, itemId, filePath) # Recursive call
         elif not itemType.startswith('application/'):
             downloadFile(service, itemId, filePath)
         else:
-            print "Unsupported file: {itemName}"
+            # print "Unsupported file: {itemName}"
 
 
 if __name__ == "__main__":
