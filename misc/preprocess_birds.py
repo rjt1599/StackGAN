@@ -7,7 +7,7 @@ from __future__ import unicode_literals
 import numpy as np
 import os
 import pickle
-from misc.utils import get_image
+from utils import get_image
 import scipy.misc
 import pandas as pd
 
