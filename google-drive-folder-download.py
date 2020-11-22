@@ -41,12 +41,12 @@ def downloadFolder(service, fileId, destinationFolder):
 
 
 if __name__ == "__main__":
-    """Based on the quickStart.py example at
-    https://developers.google.com/drive/api/v3/quickstart/python
-    """
-    creds = getCredentials()
-    service = build('drive', 'v3', credentials=creds)
-    
-    folderId = sys.argv[1]
-    destinationFolder = sys.argv[2]
-    downloadFolder(service, folderId, destinationFolder)
+        """Based on the quickStart.py example at
+        https://developers.google.com/drive/api/v3/quickstart/python
+        """
+        creds = getCredentials()
+        service = build('drive', 'v3', credentials=creds)
+        
+        folderId = sys.argv[1]
+        destinationFolder = sys.argv[2]
+        downloadFolder(service, folderId, destinationFolder)
