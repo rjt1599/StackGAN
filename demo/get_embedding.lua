@@ -25,10 +25,10 @@ for k,v in pairs(dict) do
 end
 
 opt = {
-  filenames = '',
+  filenames = 'example_captions.t7',
   doc_length = 201,
-  queries = 'cub_queries.txt',
-  net_txt = '',
+  queries = '/content/StackGAN/demo/cub_queries.txt',
+  net_txt = '/content/StackGAN/models/text_encoder/lm_sje_nc4_cub_hybrid_gru18_a1_c512_0.00070_1_10_trainvalids.txt_iter30000.t7',
 }
 
 for k,v in pairs(opt) do opt[k] = tonumber(os.getenv(k)) or os.getenv(k) or opt[k] end
@@ -55,7 +55,7 @@ for query_str in io.lines(opt.queries) do
     end
   end
   raw_txt[#raw_txt+1] = query_str
-  txt = txt:cuda()
+  -- txt = txt:cuda()
 
   fea_txt[#fea_txt+1] = net_txt:forward(txt):clone()
 end
