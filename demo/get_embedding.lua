@@ -55,7 +55,7 @@ for query_str in io.lines(opt.queries) do
     end
   end
   raw_txt[#raw_txt+1] = query_str
-  -- txt = txt:cuda()
+  txt = txt:cuda()
 
   fea_txt[#fea_txt+1] = net_txt:forward(txt):clone()
 end
